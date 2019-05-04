@@ -28,24 +28,27 @@ int main ()
    switch (x)
    {
       case '1' :
-         if ( 1<y<5 )
-         (V= (x*y*z));
-         if ( 1>=5 )
-         (V= (x+y/z));
+         if ((x=1) && ( 1<y<5 ))
+		  (V= x*y*z);
+		
+         if ((x=1) &&( 1>=5 ))
+          (V= (x+(y/z)));
 		break;
 		
       case '2' :
-         if ( y <= 5) 	
-        (V= (x-y/z));
-         if ( y > 5) 	
-        (V= x-(sqrt(y/z)));
+         if ((x=2) && ( y <= 5)) 	
+          (V= (x-y/z));
+        
+         if ((x=2) && ( y > 5))	
+          (V= x-(sqrt(y/z)));
          break;
 
       default :
-         (V= x+y+z);
+          (V= x+y+z);
          break;
    }
-cout << "V:" << setw(10) << fixed<< setprecision(2) << V;
+cout << fixed << setprecision(2); 
+cout << setw(10) << V;
+
  
-   return 0;
 }
